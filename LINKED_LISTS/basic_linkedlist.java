@@ -24,6 +24,55 @@ class LinkedList{
         node2.next = node3;
     }
 
+    public void append(Node newNode){
+        Node current = this.head;
+        if(current == null){
+            this.head = newNode;
+        }
+        else{
+            while(current.next != null){
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+    }
+
+    public void insert(Node newNode, int index){
+        Node current = this.head;
+        if(index == 0){
+            newNode.next = current;
+            this.head = newNode;
+        }
+        else{
+            for(int i = 0 ; i < index - 1 && current!=null ; i++){
+                current = current.next;
+            }
+            newNode.next = current.next;
+            current.next = newNode;
+        }
+    }
+
+    public int delete(int index){
+        Node current = this.head;
+        Node previous = null;
+        int deletedValue = -1;
+        if(index == 0){
+            deletedValue = this.head.data;
+            this.head = this.head.next;
+        }
+        else{
+            for(int i = 0 ; i < index - 1 && current !=null ; i++){
+                previous = current;
+                current = current.next;
+            }
+            if(current != null){
+                deletedValue = current.data;
+                previous.next = current.next;
+            }
+        }
+        return deletedValue;
+    }
+
     public void displayLinkedList(){
         Node current = this.head;
         while (current != null){
@@ -44,6 +93,9 @@ public class basic_linkedlist {
     Node newNode2 = new Node(11);
     Node newNode3 = new Node(15);
     l1.createLinkedList();
+    l1.append(newNode1);
+    l1.insert(newNode2, 2);
+    l1.delete(2);
     l1.displayLinkedList();
 }
 }
