@@ -32,3 +32,7 @@ public class PROBLEM_1 {
         System.out.println("Min value of Array is " + min);        
     }
     }
+/* 
+    TIME COMPLEXITY : O(n)
+    SPACE COMPLEXITY: O(1)
+*/
