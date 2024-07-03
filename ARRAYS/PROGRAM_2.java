@@ -12,10 +12,10 @@ public class PROGRAM_2 {
         System.out.print("Enter Value to be searched?");
         int search = scan.nextInt();
         System.out.println("\n");
-        for(int i = 0 ; i < n ; i++){
+        for (int i = 0; i < n; i++) {
             int value = scan.nextInt();
-            if(value == search){
-                System.out.println(search + " found at position " + (i+1));
+            if (value == search) {
+                System.out.println(search + " found at position " + (i + 1));
             }
         }
     }
