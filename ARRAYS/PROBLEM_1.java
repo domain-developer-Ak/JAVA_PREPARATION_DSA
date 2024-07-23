@@ -10,7 +10,7 @@ public class PROBLEM_1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter Value of n :");
-        int n = scan.nextInt();
+        int n = scan.nextInt();//5
         if (n <= 0) {
             System.out.println("Error couldn't handle");
             return;
